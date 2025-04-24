@@ -1,10 +1,36 @@
 # Fast api study
 
-## Install
+## Install and Settings
 ```bash
 pip install fastapi
 
 pip install 'uvicorn[standard]'
+```
+
+### pipenv 
+```bash
+# 가상환경 설정 및 설치?
+pipenv install fastapi uvicorn
+
+# 가상환경 접속
+pipenv shell
+```
+
+### pyenv + venv
+```bash
+# 3.11.2 환경의 파이썬 설치
+pyenv install 3.11.2
+
+# 3.11.2 사용
+pyenv local 3.11.2
+
+# 그 버전으로 venv 가상환경 생성
+python -m venv venv
+source venv/bin/activate
+
+# 필요한 패키지 설치
+pip install fastapi uvicorn
+
 ```
 
 ## Run
@@ -46,3 +72,9 @@ def pydantic_post(data_request: DataInput):
 ### Docs
 - swagger: http://127.0.0.1:8000/docs
 - redoc: http://127.0.0.1:8000/redoc
+
+
+
+### Ref
+- env: https://yubi5050.tistory.com/237
+- 
